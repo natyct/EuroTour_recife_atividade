@@ -1,113 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline;
+}
+
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: white;
     color: black;
+    min-height: 100vh;
+    display: inline;
+    flex-direction: column;
 }
 
 /* largura da página */
 
 .container{
-    width: 1920px;
-    max-width: 100%;
-    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* barra do topo */
 
 .topo{
     background-color: grey;
-    display: flex;
+    display:flex;
     justify-content: space-between;
-    margin-bottom: 40px;
-    padding: 20px;
+    padding: 15px;
 }
 
 /* menu */
 
 .topo a{
+    position: top;
     text-align: left;
     margin-left: 20px;
     text-decoration: none;
     color: black;
 }
 
+
 /* conteúdo */
 
 main{
-    margin-top: 20px;
+    flex: 1;
+    margin-top: 20px 0;
+}
+
+/* imagem ajustável */
+.slide {
+    width: 100%;
+    max-height: 60vh; /* ocupa só parte da tela */
+    object-fit: cover;
+    display: block;
 }
 
 /* rodapé */
 
 .rodape{
     background-color: grey;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 15px;
+    margin-top: 0px;
     display: flex;
     justify-content: space-between;
 }
 
 .rodape a{
-    margin-left: 20px;
+    margin-left: 40px;
     text-decoration: none;
     color: black;
 }
 
 
-.carousel {
-  width: 100%;
-  height: 600px;
-  position: relative;
-  overflow: hidden;
-}
 
-.slides {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: none;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Mostra o slide ativo */
-#Portugal:checked ~ .slides .slide:nth-child(1),
-#Japão:checked ~ .slides .slide:nth-child(2),
-#França:checked ~ .slides .slide:nth-child(3) {
-  display: block;
-}
-
-/* Navegação com círculos */
-.navigation {
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.navigation label {
-  width: 20px;
-  height: 20px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.navigation label:hover {
-  background-color: #999;
-}   
 
